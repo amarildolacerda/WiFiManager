@@ -21,6 +21,10 @@
 
 #include <vector>
 
+#ifdef ESP32
+#define WM_MDNS // includes MDNS, also set MDNS with sethostname
+#endif
+
 // #define WM_MDNS            // includes MDNS, also set MDNS with sethostname
 // #define WM_FIXERASECONFIG  // use erase flash fix
 // #define WM_ERASE_NVS       // esp32 erase(true) will erase NVS
