@@ -25,7 +25,14 @@
 #define WM_MDNS // includes MDNS, also set MDNS with sethostname
 #endif
 
+
 // #define WM_MDNS            // includes MDNS, also set MDNS with sethostname
+
+#ifdef NO_MDNS
+#undef WM_MDNS
+#endif
+
+
 // #define WM_FIXERASECONFIG  // use erase flash fix
 // #define WM_ERASE_NVS       // esp32 erase(true) will erase NVS
 // #define WM_RTC             // esp32 info page will include reset reasons
